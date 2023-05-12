@@ -88,12 +88,10 @@ public class ResponseController {
 			//redirect 상황에서 일회성으로 데이터를 전송할 때 사용하는 메서드.
 			//url 뒤에 데이터가 붙지 않습니다. 한 번 이용한 후에는 알아서 소멸합니다.
 			ra.addFlashAttribute("msg", "아이디는 필수값이에요!");
-		}
-		
+		}	
 		return "redirect:/response/login";
 	}
 	
-
 }
 
 
