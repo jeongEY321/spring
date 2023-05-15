@@ -10,7 +10,7 @@ public interface IBoardDAO {
 	void insertArticle(BoardVO vo);
 	
 	//전체 게시글 조회
-	List<BoardVO> listgetArticles();
+	List<BoardVO> getArticles();
 	
 	//게시글 상세 보기
 	BoardVO getArticle(int bno);
@@ -20,4 +20,5 @@ public interface IBoardDAO {
 	
 	//게시글 수정
 	void updateArticle(BoardVO vo);
+
 }

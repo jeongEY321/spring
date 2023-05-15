@@ -1,23 +1,19 @@
-package com.spring.db.model;
+package com.spring.myweb.command;
 
 import java.time.LocalDateTime;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Getter @Setter @ToString
-@NoArgsConstructor
-@AllArgsConstructor
-public class BoardVO {
+public class FreeBoardVO {
 
-	private int boardNo;
-	private String writer;
+	private int bno;
 	private String title;
+	private String writer;
 	private String content;
 	private LocalDateTime regDate;
+	private LocalDateTime updateDate;
 	
 }
