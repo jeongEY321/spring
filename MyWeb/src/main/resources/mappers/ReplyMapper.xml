@@ -7,9 +7,9 @@
 	<insert id="replyRegist">
 		INSERT INTO freereply
 		(bno, reply, reply_id, reply_pw)
-		VALUES(#{bno}, #{rpely}, #{replyId}, #{replyPw})
+		VALUES(#{bno}, #{reply}, #{replyId}, #{replyPw})
 	</insert>
-
+	
 	<select id="getList" resultType="reply">
 		SELECT * FROM freereply
 		WHERE bno = #{bno}
@@ -22,5 +22,23 @@
 		FROM freereply
 		WHERE bno = #{bno}
 	</select>
+	
+	<select id="pwCheck" resultType="string">
+		SELECT reply_pw
+		FROM freereply
+		WHERE rno = #{rno}
+	</select>
+
+	<update id="update">
+		UPDATE freereply
+		SET reply = #{reply}, update_date = current_timestamp
+		WHERE rno = #{rno}
+	</update>
+
+	<delete id="delete">
+		DELETE FROM freereply WHERE rno = #{rno}
+	</delete>
+
+
 
 </mapper>
