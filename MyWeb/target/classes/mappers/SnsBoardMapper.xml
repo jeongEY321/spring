@@ -5,17 +5,27 @@
    <mapper namespace="com.spring.myweb.snsboard.mapper.ISnsBoardMapper">
     
     <!-- 등록하기 -->
-    <insert id="insert">
-    	INSERT INTO snsboard
-    	(writer, upload_path, file_loca, file_name, file_real_name, content)
-    	VALUES
-    	(#{writer}, #{uploadPath},#{fileLoca}, #{fileName}, #{fileRealName}, #{content})
-    </insert>
-    
-    <select id="getList" resultType="sns">
-    	SELECT * FROM snsboard
-    	ORDER BY bno DESC
-    	LIMIT #{pageStart}, #{cpp}
-    </select>
-    
-    </mapper>
+	<insert id="insert">
+		INSERT INTO snsboard
+		(writer, upload_path, file_loca, file_name, file_real_name, content)
+		VALUES
+		(#{writer}, #{uploadPath}, #{fileLoca}, #{fileName}, #{fileRealName}, #{content})
+	</insert>
+	
+	<select id="getList" resultType="sns">
+		SELECT * FROM snsboard
+		ORDER BY bno DESC
+		LIMIT #{pageStart}, #{cpp}
+	</select>
+
+	<select id="getDetail" resultType="sns">
+		SELECT * FROM snsboard
+		WHERE bno = #{bno}
+	</select>
+	
+	<delete id="delete">
+		DELETE FROM snsboard
+		WHERE bno = #{bno}
+	</delete>
+
+</mapper>
