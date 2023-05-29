@@ -455,8 +455,7 @@
 					const href = e.target.getAttribute('href');		
 					location.href = href;
 				} else return;
-				
-				
+
 			}
 			
 
