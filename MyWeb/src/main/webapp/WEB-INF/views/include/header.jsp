@@ -13,7 +13,7 @@
 
     <link href="${pageContext.request.contextPath }/css/bootstrap.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!--개인 디자인 추가-->
+    <!--개인 디자인 추가 추가 또 추가-->
     <link href="${pageContext.request.contextPath }/css/style.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
 </head>
